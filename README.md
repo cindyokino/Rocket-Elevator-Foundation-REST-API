@@ -1,6 +1,37 @@
-Here's some information about the REST api for Rocket Elevators.
+# Rocket-Elevator-Foundation-REST-API
 
-### API URL : https://rocket-elevators-rest-api.azurewebsites.net/
+CodeBoxx Bootcamp Week 9 - Consolidation of Achievements
+
+### Deliverables:
+REST API with 3 new contact points:
+● GET: Returns all fields of all Service Request records that do not have a start date and are in "Pending" status.
+● PUT: Change the status of the intervention request to "InProgress" and add a start date and time (Timestamp).
+● PUT: Change the status of the request for action to "Completed" and add an end date and time (Timestamp).
+
+### Examples:
+https://rocketelevatorsrestapicindy.azurewebsites.net/api/Interventions
+https://rocketelevatorsrestapicindy.azurewebsites.net/api/Interventions/5/start-progress
+https://rocketelevatorsrestapicindy.azurewebsites.net/api/Interventions/1/complete-progress
+
+### Links:
+Rails application: https://cindyokino.com/
+
+Rails repository: https://github.com/cindyokino/Rocket-Elevator-Foundation
+
+REST API URL: https://rocketelevatorsrestapicindy.azurewebsites.net/
+
+Postman collection for the 3 requests: https://www.getpostman.com/collections/1f6ff9e4a17b83f4588c
+
+Postman collection for the other requests (week 8): https://www.getpostman.com/collections/c383b8245107831e5654
+
+### Explanations:
+- Created a controller `InterventionsController.cs`
+- Created a model `Intervention.cs`
+- Modified the file `InformationContext.cs` to set the relations ant relate the entity with its respective table in the database.
+
+=======================================================================================
+
+Here's some information about the REST api for Rocket Elevators.
 
 - The entities are the Models folder, with the attributes that are needed for our cas. For example, for the ELevator class : 
 
