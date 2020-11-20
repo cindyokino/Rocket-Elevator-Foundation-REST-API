@@ -9235,30 +9235,29 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tardi\\.nuget\\packages\\": {}
+    "/home/cindy/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tardi\\Desktop\\WHA\\Rocket_Elevators_REST_API\\Rocket_Elevator_RESTApi.csproj",
+      "projectUniqueName": "/home/cindy/Rocket-Elevator-Foundation-REST-API/Rocket_Elevator_RESTApi.csproj",
       "projectName": "Rocket_Elevator_RESTApi",
-      "projectPath": "C:\\Users\\tardi\\Desktop\\WHA\\Rocket_Elevators_REST_API\\Rocket_Elevator_RESTApi.csproj",
-      "packagesPath": "C:\\Users\\tardi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tardi\\Desktop\\WHA\\Rocket_Elevators_REST_API\\obj\\",
+      "projectPath": "/home/cindy/Rocket-Elevator-Foundation-REST-API/Rocket_Elevator_RESTApi.csproj",
+      "packagesPath": "/home/cindy/.nuget/packages/",
+      "outputPath": "/home/cindy/Rocket-Elevator-Foundation-REST-API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tardi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/cindy/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -9270,6 +9269,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "EntityFramework": {
             "target": "Package",
@@ -9320,6 +9320,16 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.8, 3.1.8]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[3.1.9, 3.1.9]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -9328,7 +9338,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }
