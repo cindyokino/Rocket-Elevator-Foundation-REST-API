@@ -9,13 +9,13 @@ using Rocket_Elevator_RESTApi.Models;
 
 namespace Rocket_Elevator_RESTApi.Controllers
 {
-    [Produces("application/json")]
+    // [Produces("application/json")]
 
-    [Route("api/[controller]")]
+    [Route("api/Customers")]
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        private readonly InformationContext _context;  // Rocket_app_developmentContext ?
+        private readonly InformationContext _context;  
 
         public CustomersController(InformationContext context)
         {
