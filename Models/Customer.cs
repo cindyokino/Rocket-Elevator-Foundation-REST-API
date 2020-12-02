@@ -19,8 +19,7 @@ namespace Rocket_Elevator_RESTApi.Models
         public int user_id { get; set; }
         public int address_id { get; set; }
 
-        public virtual ICollection<Building> Buildings { get; }
-        public virtual ICollection<Battery> Bateries { get; } //Test
+        public virtual ICollection<Building> Buildings { get; set; }
         
     }
 }

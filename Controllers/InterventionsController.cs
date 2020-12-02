@@ -37,8 +37,8 @@ namespace Rocket_Elevator_RESTApi.Controllers
         [HttpPut("{id}/start-progress")]
         public async Task<ActionResult<Intervention>> PutInterventionStart(int id)
         {
-           var existingIntervention = _context.interventions.Where(i => i.id == id)
-                                                    .FirstOrDefault<Intervention>();
+           var existingIntervention = await _context.interventions.Where(i => i.id == id)
+                                                    .FirstOrDefaultAsync<Intervention>();
 
             if(existingIntervention == null)
             {
@@ -59,8 +59,8 @@ namespace Rocket_Elevator_RESTApi.Controllers
         [HttpPut("{id}/complete-progress")]
         public async Task<ActionResult<Intervention>> PutInterventionEnd(int id)
         {
-           var existingIntervention = _context.interventions.Where(i => i.id == id)
-                                                    .FirstOrDefault<Intervention>();
+           var existingIntervention = await _context.interventions.Where(i => i.id == id)
+                                                    .FirstOrDefaultAsync<Intervention>();
 
             if(existingIntervention == null)
             {

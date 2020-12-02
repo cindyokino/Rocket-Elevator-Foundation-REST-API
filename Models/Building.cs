@@ -20,7 +20,7 @@ namespace Rocket_Elevator_RESTApi.Models
         
         public virtual ICollection<Battery> Batteries { get; set;}
 
-        public  Customer Customer { get; }
+        public  Customer Customer { get; set; }
 
 
     }

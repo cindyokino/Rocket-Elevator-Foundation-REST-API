@@ -9,7 +9,6 @@ using Rocket_Elevator_RESTApi.Models;
 
 namespace Rocket_Elevator_RESTApi.Controllers
 {
-    // [Produces("application/json")]
 
     [Route("api/Customers")]
     [ApiController]
@@ -29,20 +28,21 @@ namespace Rocket_Elevator_RESTApi.Controllers
             return await _context.customers.ToListAsync();
         }
 
+        // Get all the infos about a customer (buildings, batteries, columns, elevators) using the customer_id
         // GET: api/Customers/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Customer>> GetCustomer(long id)
+        public async Task<ActionResult<Customer>> GetCustomer(int id)
         {
-            var customer = await _context.customers.FindAsync(id);
-            Console.Write(customer.Buildings);
+            var customer = await _context.customers.Include("Buildings.Batteries.Columns.Elevators")
+                                                .Where(c => c.id == id)
+                                                .FirstAsync();            
 
             if (customer == null)
             {
                 return NotFound();
             }
 
-            Console.Write(customer.Buildings);
             return customer;
-        }
+        } 
     }
 }
