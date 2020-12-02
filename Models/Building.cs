@@ -14,9 +14,13 @@ namespace Rocket_Elevator_RESTApi.Models
         public string tect_contact_name { get; set;}
         public string tect_contact_email { get; set;}
         public string tect_contact_phone { get; set;}
+        public int customer_id { get; set;}
+        public int address_id { get; set;}
+
         
         public virtual ICollection<Battery> Batteries { get; set;}
 
+        public  Customer Customer { get; }
 
 
     }
