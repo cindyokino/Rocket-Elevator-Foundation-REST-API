@@ -4,9 +4,9 @@ CodeBoxx Bootcamp Week 9 - Consolidation of Achievements
 
 ### Deliverables:
 REST API with 3 new contact points:
-● GET: Returns all fields of all Service Request records that do not have a start date and are in "Pending" status.
-● PUT: Change the status of the intervention request to "InProgress" and add a start date and time (Timestamp).
-● PUT: Change the status of the request for action to "Completed" and add an end date and time (Timestamp).
+- GET: Returns all fields of all Service Request records that do not have a start date and are in "Pending" status.
+- PUT: Change the status of the intervention request to "InProgress" and add a start date and time (Timestamp).
+- PUT: Change the status of the request for action to "Completed" and add an end date and time (Timestamp).
 
 ### Examples:
 https://rocketelevatorsrestapicindy.azurewebsites.net/api/Interventions
