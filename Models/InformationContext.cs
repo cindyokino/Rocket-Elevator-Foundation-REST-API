@@ -1,9 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Rocket_Elevator_RESTApi.Models;
 
-
-
-
 namespace Rocket_Elevator_RESTApi.Models
 {
     public class InformationContext : DbContext
