@@ -75,5 +75,24 @@ namespace Rocket_Elevator_RESTApi.Controllers
 
             return existingIntervention;
         }
+
+        
+
+        // ========== Post to save a new intervention ========================================================================
+        // POST: api/Interventions
+        [HttpPost]
+        public async Task<ActionResult<Intervention>> PostIntervention(Intervention newIntervention)
+        {
+            newIntervention.start_date_time = DateTime.Now;
+            newIntervention.updated_at = DateTime.Now;
+            newIntervention.status = "InProgress";
+            newIntervention.result = "Incomplete";
+            newIntervention.employee_id = null;
+
+            _context.interventions.Add(newIntervention);
+            await _context.SaveChangesAsync();
+
+            return newIntervention;
+        }
     }
 }

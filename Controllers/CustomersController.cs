@@ -35,7 +35,7 @@ namespace Rocket_Elevator_RESTApi.Controllers
         {
             var customer = await _context.customers.Include("Buildings.Batteries.Columns.Elevators")
                                                 .Where(c => c.cpy_contact_email == email)
-                                                .FirstAsync();            
+                                                .FirstOrDefaultAsync();            
 
             if (customer == null)
             {
@@ -52,7 +52,7 @@ namespace Rocket_Elevator_RESTApi.Controllers
         {
             var customer = await _context.customers.Include("Buildings.Batteries.Columns.Elevators")
                                                 .Where(c => c.cpy_contact_email == email)
-                                                .FirstAsync();            
+                                                .FirstOrDefaultAsync();            
 
             if (customer == null)
             {
@@ -62,9 +62,8 @@ namespace Rocket_Elevator_RESTApi.Controllers
             return Ok();
         } 
 
-
-// TODO_CINDY - POST for the Customer update ???
-// TODO_CINDY - POST for a new Intervention ???
+            
+    // TODO_CINDY - POST for the Customer update ???
 
     }
 }
