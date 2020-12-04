@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -68,14 +69,15 @@ namespace Rocket_Elevator_RESTApi.Controllers
 
         // ========== Put for update the customer infos =========================================================================
         // PUT: api/Customers/cindy@client.com
-        [HttpPut("{email}")]
-        public async Task<ActionResult<Customer>> PutCustomer(string email, Customer customer)
+        [HttpPut]
+        [EnableCors("MyPolicy")]
+        public async Task<ActionResult<Customer>> PutCustomer(Customer customer)
         {
-            var customerToUpdate = await _context.customers.Include("Buildings.Batteries.Columns.Elevators")
-                                                .Where(c => c.cpy_contact_email == email)
+            var customerToUpdate = await _context.customers
+                                                .Where(c => c.cpy_contact_email == customer.cpy_contact_email)
                                                 .FirstOrDefaultAsync(); 
 
-            if (customer == null)
+            if (customerToUpdate == null)
             {
                 return NotFound();
             }

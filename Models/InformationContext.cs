@@ -36,6 +36,9 @@ namespace Rocket_Elevator_RESTApi.Models
                 modelBuilder.Entity<Customer>()  // New - for customers
                 .HasKey(x => x.id);
 
+                // modelBuilder.Entity<Address>()  // New - for addresses
+                // .HasKey(x => x.id);
+
                 
                 modelBuilder.Entity<Customer>()
                 .HasMany(x => x.Buildings) //customer has_many :buildings
@@ -46,6 +49,16 @@ namespace Rocket_Elevator_RESTApi.Models
                 .HasMany(x => x.Batteries) //building has_many    :batteries
                 .WithOne( y => y.Building)
                 .HasForeignKey(z => z.building_id);                
+                
+                // modelBuilder.Entity<Building>()
+                // .HasOne(x => x.Address) //building belongs_to    :addresses
+                // .WithOne( y => y.Building)
+                // .HasForeignKey(z => z.building_id); 
+
+                // modelBuilder.Entity<Address>()
+                // .HasOne(x => x.Building) //building belongs_to    :addresses
+                // .WithOne( y => y.Address)
+                // .HasForeignKey(z => z.address_id);
                 
                 modelBuilder.Entity<Battery>()
                 .HasMany(x => x.Columns) //battery has_many :columns
@@ -76,5 +89,6 @@ namespace Rocket_Elevator_RESTApi.Models
         public DbSet<Quote> quotes { get; set; }
         public DbSet<Intervention> interventions { get; set; }  // New - for intervention
         public DbSet<Customer> customers { get; set; }  // New - for customer
+        // public DbSet<Address> addresses { get; set; }  // New - for address
     }
 }

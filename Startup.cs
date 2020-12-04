@@ -34,12 +34,17 @@ namespace Rocket_Elevator_RESTApi
 
             services.AddCors();
 
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            }));
+
             services.AddSwaggerGen();
 
             services.AddDbContext<InformationContext>(options =>
             options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
-
-;
 
             services.AddMvc().AddNewtonsoftJson(setupAction: options =>
             {
