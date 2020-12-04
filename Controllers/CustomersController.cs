@@ -35,7 +35,11 @@ namespace Rocket_Elevator_RESTApi.Controllers
         {
             var customer = await _context.customers.Include("Buildings.Batteries.Columns.Elevators")
                                                 .Where(c => c.cpy_contact_email == email)
-                                                .FirstOrDefaultAsync();            
+                                                .FirstOrDefaultAsync();  
+
+            // customer = await _context.customers.Include("Buildings.Addresses")
+            //                                     .Where(c => c.cpy_contact_email == email)
+            //                                     .FirstOrDefaultAsync();          
 
             if (customer == null)
             {
@@ -62,8 +66,31 @@ namespace Rocket_Elevator_RESTApi.Controllers
             return Ok();
         } 
 
-            
-    // TODO_CINDY - POST for the Customer update ???
+        // ========== Put for update the customer infos =========================================================================
+        // PUT: api/Customers/cindy@client.com
+        [HttpPut("{email}")]
+        public async Task<ActionResult<Customer>> PutCustomer(string email, Customer customer)
+        {
+            var customerToUpdate = await _context.customers.Include("Buildings.Batteries.Columns.Elevators")
+                                                .Where(c => c.cpy_contact_email == email)
+                                                .FirstOrDefaultAsync(); 
 
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            customerToUpdate.company_name = customer.company_name;
+            customerToUpdate.cpy_contact_name = customer.cpy_contact_name;
+            customerToUpdate.cpy_contact_phone = customer.cpy_contact_phone;
+            customerToUpdate.sta_name = customer.sta_name;
+            customerToUpdate.sta_phone = customer.sta_phone;
+            customerToUpdate.sta_mail = customer.sta_mail;
+            customerToUpdate.cpy_description = customer.cpy_description;
+
+            await _context.SaveChangesAsync();
+
+            return customerToUpdate;
+        }
     }
 }
