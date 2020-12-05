@@ -1,5 +1,19 @@
 # Rocket-Elevator-Foundation-REST-API
 
+CodeBoxx Bootcamp Week 11 - Understanding the .NET Framework
+
+## REST API with new contact points:
+
+### Customers Controller:
+- GET: `url + /api/Customers/{email}` Get all the infos about a customer (buildings, batteries, columns, elevators) using the customer_id
+- GET: `url + /api/Customers/verify/{email}` Verify email for register at the Customer's Portal
+- PUT: `url + /api/Customers/{email}` Put for update the customer infos
+
+### 
+- POST: `url + /api/Interventions` Post to save a new intervention
+=======================================================================================
+
+
 CodeBoxx Bootcamp Week 9 - Consolidation of Achievements
 
 ### Deliverables:
