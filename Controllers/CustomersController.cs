@@ -70,7 +70,6 @@ namespace Rocket_Elevator_RESTApi.Controllers
         // ========== Put for update the customer infos =========================================================================
         // PUT: api/Customers/cindy@client.com
         [HttpPut]
-        [EnableCors("MyPolicy")]
         public async Task<ActionResult<Customer>> PutCustomer(Customer customer)
         {
             var customerToUpdate = await _context.customers
