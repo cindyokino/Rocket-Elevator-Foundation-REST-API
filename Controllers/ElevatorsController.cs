@@ -78,6 +78,14 @@ namespace Rocket_Elevator_RESTApi.Controllers
             
         }
 
+        [HttpGet("not-online")]
+        public async Task<ActionResult<IEnumerable<Elevator>>> GetelevatorsNotOnline()
+        {
+            return  await _context.elevators
+                    .Where(Elevator => Elevator.status != "Online" ).ToListAsync();
+            
+        }
+
         // PUT: api/Elevators/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.

@@ -657,8 +657,3 @@ C:/Users/tardi/Desktop/WHA/Rocket_Elevators_REST_API/obj/Debug/netcoreapp3.1/Roc
 /home/cindy/Rocket-Elevator-Foundation-REST-API/obj/Debug/netcoreapp3.1/Rocket_Elevator_RESTApi.RazorTargetAssemblyInfo.cache
 /home/cindy/Rocket-Elevator-Foundation-REST-API/obj/Debug/netcoreapp3.1/Rocket_Elevator_RESTApi.csproj.CopyComplete
 /home/cindy/Rocket-Elevator-Foundation-REST-API/obj/Debug/netcoreapp3.1/Rocket_Elevator_RESTApi.genruntimeconfig.cache
-/home/cindy/Rocket-Elevator-Foundation-REST-API/bin/Debug/netcoreapp3.1/publish/publish/web.config
-/home/cindy/Rocket-Elevator-Foundation-REST-API/bin/Debug/netcoreapp3.1/publish/publish/appsettings.Development.json
-/home/cindy/Rocket-Elevator-Foundation-REST-API/bin/Debug/netcoreapp3.1/publish/publish/appsettings.json
-/home/cindy/Rocket-Elevator-Foundation-REST-API/bin/Debug/netcoreapp3.1/publish/publish/Rocket_Elevator_RESTApi.deps.json
-/home/cindy/Rocket-Elevator-Foundation-REST-API/bin/Debug/netcoreapp3.1/publish/publish/Rocket_Elevator_RESTApi.runtimeconfig.json

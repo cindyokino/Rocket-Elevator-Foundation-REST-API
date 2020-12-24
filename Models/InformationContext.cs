@@ -39,6 +39,9 @@ namespace Rocket_Elevator_RESTApi.Models
                 // modelBuilder.Entity<Address>()  // New - for addresses
                 // .HasKey(x => x.id);
 
+                modelBuilder.Entity<Employee>()
+                .HasKey(x => x.id);
+
                 
                 modelBuilder.Entity<Customer>()
                 .HasMany(x => x.Buildings) //customer has_many :buildings
@@ -89,6 +92,8 @@ namespace Rocket_Elevator_RESTApi.Models
         public DbSet<Quote> quotes { get; set; }
         public DbSet<Intervention> interventions { get; set; }  // New - for intervention
         public DbSet<Customer> customers { get; set; }  // New - for customer
+
+        public DbSet<Employee> employees { get; set; }  
         // public DbSet<Address> addresses { get; set; }  // New - for address
     }
 }
